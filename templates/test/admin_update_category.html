@@ -1,0 +1,115 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<style>
+    body{
+  margin: 0;
+  padding: 0;
+}
+.containerr{
+  text-align: center;
+  margin-top: 50px;
+}
+.btn{
+  border: 1px solid #3498db;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "montserrat";
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+.btn1,.btn2{
+  color: #3498db;
+}
+.btn3,.btn4{
+  color: #fff;
+}
+.btn1:hover,.btn2:hover{
+  color: #fff;
+}
+.btn3:hover,.btn4:hover{
+  color: #3498db;
+}
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #3498db;
+  z-index: -1;
+  transition: 0.8s;
+}
+.btn1::before,.btn3::before{
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+.btn2::before,.btn4::before{
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+.btn3::before,.btn4::before{
+  height: 180%;
+}
+.btn1:hover::before,.btn2:hover::before{
+  height: 180%;
+}
+.btn3:hover::before,.btn4:hover::before{
+  height: 0%;
+}
+
+</style>
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+  </style>
+</head>
+<br><br>
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-heading">
+      <h6 class="panel-title">Update Category</h6>
+    </div>
+    <table class="table table-hover" id="dev-table">
+      <thead>
+        <tr>
+            <th>Serial No.</th>
+            <th>Category Name</th>
+             <th> Creation Date</th>
+             <th>Update Category</th>
+        </tr>
+      </thead>
+      {% for t in categories %}
+      <tr>
+
+      <td> {{ forloop.counter }}</td>
+        <td> {{t.category_name}}</td>
+        <td>{{t.creation_date}}</td>
+
+        <td><a class="btn btn1" href="{% url 'update-category' t.id  %}"><span class="glyphicon glyphicon-edit"></span></a></td>
+      </tr>
+      {% endfor %}
+    </table>
+  </div>
+</div>
+
+<br><br><br><br><br><br>
+{% endblock content %}

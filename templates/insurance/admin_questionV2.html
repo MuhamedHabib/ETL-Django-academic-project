@@ -1,0 +1,247 @@
+{% extends 'layouts/baseV2.html' %}
+
+{% block title %} UI Tables {% endblock title %}
+
+<!-- Specific CSS goes HERE -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+    {%load static%}
+
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <div class="container-fluid py-4"style="margin: 0px 0 0px 100px;width:1200px">
+
+<div class="row" >
+      <div class="col-12">
+        <div class="card mb-4">
+          <div class="card-header pb-0">
+            <h6>Admin View Waiting Policy Holder</h6>
+          </div>
+          <div class="card-body px-0 pt-0 pb-2">
+            <div class="table-responsive p-0">
+              <table class="table align-items-center mb-0" >
+                <thead>
+                  <tr>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Serial No.</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Customer Name</th>
+                    <th class="text-secondary opacity-7">Problem</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Admin Comment</th>
+                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Asked Date</th>
+                    <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Update</th>
+
+
+
+                  </tr>
+                </thead>
+                <tbody>
+                 {% for t in questions %}
+
+                  <tr>
+                    <td><div class="d-flex px-2 py-1"><div class="d-flex flex-column justify-content-center"><h6 class="mb-0 text-sm">{{ forloop.counter }}</h6></div></div></td>
+                    <td ><p class="text-xs font-weight-bold mb-0"> {{t.customer}}</p></td>
+
+                    <td class="align-middle text-center"><span class="text-secondary text-xs font-weight-bold">{{t.description}}</span></td>
+                    <td class="align-middle text-center text-sm"><span class="badge badge-sm bg-gradient-success">{{t.admin_comment}}</span></td>
+                    <td class="align-middle text-center text-sm"><span class="badge badge-sm bg-gradient-success">{{t.asked_date}}</span></td>
+                    <td><a class="btn btn-danger btn-xs" href="{% url 'update-question' t.id  %}"><span class="glyphicon glyphicon-edit"></span></a></td>
+
+                  </tr>
+                  {% endfor %}
+                  <!--<tr>
+
+                    <td>
+                      <div class="d-flex px-2 py-1">
+                        <div>
+                          <img src="/static/assets/img/team-2.jpg" class="avatar avatar-sm me-3">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="mb-0 text-sm">John Michael</h6>
+                          <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0">Manager</p>
+                      <p class="text-xs text-secondary mb-0">Organization</p>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <span class="badge badge-sm bg-gradient-success">Online</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">23/04/18</span>
+                    </td>
+                    <td class="align-middle">
+                      <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                        Edit
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2 py-1">
+                        <div>
+                          <img src="/static/assets/img/team-3.jpg" class="avatar avatar-sm me-3">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="mb-0 text-sm">Alexa Liras</h6>
+                          <p class="text-xs text-secondary mb-0">alexa@creative-tim.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0">Programator</p>
+                      <p class="text-xs text-secondary mb-0">Developer</p>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <span class="badge badge-sm bg-gradient-secondary">Offline</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">11/01/19</span>
+                    </td>
+                    <td class="align-middle">
+                      <a href="#!" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                        Edit
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2 py-1">
+                        <div>
+                          <img src="/static/assets/img/team-4.jpg" class="avatar avatar-sm me-3">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="mb-0 text-sm">Laurent Perrier</h6>
+                          <p class="text-xs text-secondary mb-0">laurent@creative-tim.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0">Executive</p>
+                      <p class="text-xs text-secondary mb-0">Projects</p>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <span class="badge badge-sm bg-gradient-success">Online</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">19/09/17</span>
+                    </td>
+                    <td class="align-middle">
+                      <a href="#!" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                        Edit
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2 py-1">
+                        <div>
+                          <img src="/static/assets/img/team-3.jpg" class="avatar avatar-sm me-3">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="mb-0 text-sm">Michael Levi</h6>
+                          <p class="text-xs text-secondary mb-0">michael@creative-tim.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0">Programator</p>
+                      <p class="text-xs text-secondary mb-0">Developer</p>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <span class="badge badge-sm bg-gradient-success">Online</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">24/12/08</span>
+                    </td>
+                    <td class="align-middle">
+                      <a href="#!" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                        Edit
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2 py-1">
+                        <div>
+                          <img src="/static/assets/img/team-2.jpg" class="avatar avatar-sm me-3">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="mb-0 text-sm">Richard Gran</h6>
+                          <p class="text-xs text-secondary mb-0">richard@creative-tim.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0">Manager</p>
+                      <p class="text-xs text-secondary mb-0">Executive</p>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <span class="badge badge-sm bg-gradient-secondary">Offline</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">04/10/21</span>
+                    </td>
+                    <td class="align-middle">
+                      <a href="#!" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                        Edit
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="d-flex px-2 py-1">
+                        <div>
+                          <img src="/static/assets/img/team-4.jpg" class="avatar avatar-sm me-3">
+                        </div>
+                        <div class="d-flex flex-column justify-content-center">
+                          <h6 class="mb-0 text-sm">Miriam Eric</h6>
+                          <p class="text-xs text-secondary mb-0">miriam@creative-tim.com</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <p class="text-xs font-weight-bold mb-0">Programtor</p>
+                      <p class="text-xs text-secondary mb-0">Developer</p>
+                    </td>
+                    <td class="align-middle text-center text-sm">
+                      <span class="badge badge-sm bg-gradient-secondary">Offline</span>
+                    </td>
+                    <td class="align-middle text-center">
+                      <span class="text-secondary text-xs font-weight-bold">14/09/20</span>
+                    </td>
+                    <td class="align-middle">
+                      <a href="#!" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                        Edit
+                      </a>
+                    </td>
+                  </tr>-->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% include "includes/footer.html" %}
+
+  </div>
+
+{% endblock content %}
+
+<!-- Specific JS goes HERE -->
+{% block javascripts %}
+
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+
+{% endblock javascripts %}

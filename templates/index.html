@@ -1,0 +1,1017 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========== Meta Tags ========== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Anada - Data Science & Analytics Template">
+
+    <!-- ========== Page Title ========== -->
+    <title>Anada - Data Science & Analytics Template</title>
+
+    <!-- ========== Favicon Icon ========== -->
+    <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}" type="image/x-icon">
+
+    <!-- ========== Start Stylesheet ========== -->
+    <link href="{% static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/font-awesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/themify-icons.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/flaticon-set.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/magnific-popup.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/owl.carousel.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/owl.theme.default.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/animate.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/bootsnav.css' %}" rel="stylesheet" />
+    <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'assets/css/responsive.css' %}" rel="stylesheet" />
+    <!-- ========== End Stylesheet ========== -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5/html5shiv.min.js"></script>
+      <script src="assets/js/html5/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ========== Google Fonts ========== -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="se-pre-con"></div>
+    <!-- Preloader Ends -->
+
+    <!-- Header 
+    ============================================= -->
+    <header id="home">
+
+        <!-- Start Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-light attr-border navbar-fixed dark no-background bootsnav">
+
+            <!-- Start Top Search -->
+            <div class="container">
+                <div class="row">
+                    <div class="top-search">
+                        <div class="input-group">
+                            <form action="#">
+                                <input type="text" name="text" class="form-control" placeholder="Search">
+                                <button type="submit">
+                                    <i class="ti-search"></i>
+                                </button>  
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Top Search -->
+
+            <div class="container">
+
+                <!-- Start Atribute Navigation -->
+                <div class="attr-nav">
+                    <ul>
+                        <li class="search"><a href="#"><i class="ti-search"></i></a></li>
+                        <li class="side-menu"><a href="#"><i class="ti-menu-alt"></i></a></li>
+                    </ul>
+                </div>        
+                <!-- End Atribute Navigation -->
+
+                <!-- Start Header Navigation -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <a class="navbar-brand" href="index.html">
+                        <img src="{% static 'assets/img/logo-light.png' %}" class="logo default" alt="Logo">
+                        <img src="{% static 'assets/img/logo.png' %}" class="logo logo-responsive" alt="Logo">
+                    </a>
+                </div>
+                <!-- End Header Navigation -->
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbar-menu">
+                    <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
+                        <!--<li class="dropdown">
+                            <a href="#" class="dropdown-toggle active" data-toggle="dropdown" >Home</a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Home Multipage</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index.html">Version One</a></li>
+                                        <li><a href="index-2.html">Version Two</a></li>
+                                        <li><a href="index-3.html">Version Three</a></li>
+                                        <li><a href="index-4.html">Version Four</a></li>
+                                        <li><a href="index-5.html">Version Five</a></li>
+                                        <li><a href="index-6.html">Version Six</a></li>
+                                        <li><a href="index-7.html">Version Seven</a></li>
+                                        <li><a href="index-8.html">Version Eight</a></li>
+                                        <li><a href="index-9.html">Version Nine</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Home Onepage</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index-op.html">Version One</a></li>
+                                        <li><a href="index-op-2.html">Version Two</a></li>
+                                        <li><a href="index-op-3.html">Version Three</a></li>
+                                        <li><a href="index-op-4.html">Version Four</a></li>
+                                        <li><a href="index-op-5.html">Version Five</a></li>
+                                        <li><a href="index-op-6.html">Version Six</a></li>
+                                        <li><a href="index-op-7.html">Version Seven</a></li>
+                                        <li><a href="index-op-8.html">Version Eight</a></li>
+                                    </ul>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Home Dark</a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="index-dark.html">Version One</a></li>
+                                        <li><a href="index-dark-2.html">Version Two</a></li>
+                                        <li><a href="index-dark-3.html">Version Three</a></li>
+                                        <li><a href="index-dark-4.html">Version Four</a></li>
+                                        <li><a href="index-dark-5.html">Version Five</a></li>
+                                        <li><a href="index-dark-6.html">Version Six</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Company</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about-us.html">About Company</a></li>
+                                <li><a href="team.html">Meet Our Team</a></li>
+                                <li><a href="contact.html">Get in Touch</a></li>
+                                <li><a target="_blank" href="login.html">Login</a></li>
+                                <li><a target="_blank" href="register.html">Register</a></li>
+                                <li><a href="404.html">Error Page</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Services</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="services.html">Services Version One</a></li>
+                                <li><a href="services-2.html">Services Version Two</a></li>
+                                <li><a href="services-3.html">Services Version Three</a></li>
+                                <li><a href="services-4.html">Services Version Four</a></li>
+                                <li><a href="services-single.html">Services Single</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Case Studies</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="case-studies-1.html">Case Studies One</a></li>
+                                <li><a href="case-studies-2.html">Case Studies Two</a></li>
+                                <li><a href="case-studies-3.html">Case Studies Three</a></li>
+                                <li><a href="case-studies-carousel.html">Case Studies Carousel</a></li>
+                                <li><a href="case-studies-single.html">Case Studies Details</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" >Blog</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="blog-standard.html">Blog Standard</a></li>
+                                <li><a href="blog-with-sidebar.html">Blog With Sidebar</a></li>
+                                <li><a href="blog-2-colum.html">Blog Grid Two Colum</a></li>
+                                <li><a href="blog-3-colum.html">Blog Grid Three Colum</a></li>
+                                <li><a href="blog-single.html">Blog Single</a></li>
+                                <li><a href="blog-single-with-sidebar.html">Blog Single With Sidebar</a></li>
+                            </ul>
+                        </li>-->
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="presentation">Presentation</a>
+                        </li>
+                        {% if '0' in auth %}
+                        <li>
+                            <a href="customer/register">Register</a>
+                        </li>
+                        <li>
+                            <a href="customer/customerclick">Login</a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="customer/dashboard">My profile</a>
+                        </li>
+                        <li>
+                            <a href="logout">Logout</a>
+                        </li>
+                        {% endif %}
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+
+            <!-- Start Side Menu -->
+            <div class="side">
+                <a href="#" class="close-side"><i class="ti-close"></i></a>
+                <div class="widget">
+                    <h4 class="title">Contact Info</h4>
+                    <ul class="contact">
+                        <li>
+                            <div class="icon">
+                                <i class="flaticon-email"></i>
+                            </div>
+                            <div class="info">
+                                <span>Email</span> Info@gmail.com
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="flaticon-call-1"></i>
+                            </div>
+                            <div class="info">
+                                <span>Phone</span> +123 456 7890
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="flaticon-countdown"></i>
+                            </div>
+                            <div class="info">
+                                <span>Office Hours</span> Sat - Wed : 8:00 - 4:00
+                            </div> 
+                        </li>
+                    </ul>
+                </div>
+                <div class="widget">
+                    <h4 class="title">Additional Links</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Login</a></li>
+                        <li><a href="#">Register</a></li>
+                    </ul>
+                </div>
+                <div class="widget social">
+                    <h4 class="title">Connect With Us</h4>
+                    <ul class="link">
+                        <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li class="pinterest"><a href="#"><i class="fab fa-pinterest"></i></a></li>
+                        <li class="dribbble"><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- End Side Menu -->
+
+        </nav>
+        <!-- End Navigation -->
+
+    </header>
+    <!-- End Header -->
+
+    <!-- Start Banner 
+    ============================================= -->
+    <div class="banner-area text-combo top-pad-90 rectangular-shape bg-light-gradient">
+        <div class="item">
+            <div class="box-table">
+                <div class="box-cell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="double-items">
+                                <div class="col-lg-6 info">
+                                    <h2 class="wow fadeInDown" data-wow-duration="1s"><span>Applying Data Science</span> And Techniques with Systems</h2>
+                                    <p class="wow fadeInLeft" data-wow-duration="1.5s">
+                                        Contented continued any happiness instantly objection yet her allowance. Use correct day new brought tedious. Kept easy or sons my it done.
+                                    </p>
+                                    <a class="btn circle btn-md btn-gradient wow fadeInUp" data-wow-duration="1.8s" href="#">Get Started <i class="fas fa-plus"></i></a>
+                                </div>
+                                <div class="col-lg-6 thumb wow fadeInRight" data-wow-duration="1s">
+                                    <img src="{% static 'assets/img/illustration/1.png' %}" alt="Thumb">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Banner -->
+
+    <!-- Start Our Features
+    ============================================= -->
+    <div class="our-features-area wavesshape-bottom carousel-shadow default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="thumb wow fadeInRight">
+                        <img src="{% static 'assets/img/illustration/2.png' %}" alt="Thumb">
+                    </div>
+                </div>
+                <div class="col-lg-7 info">
+                    <div class="feature-items feature-carousel owl-carousel owl-theme">
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="icon">
+                                <i class="flaticon-target"></i>
+                            </div>
+                            <h3>Traget your audience</h3>
+                            <p>
+                                Especially of dissimilar up attachment themselves by interested boisterous. Linen mrs seems men table. Jennings dashwood to quitting marriage bachelor in. On as conviction in of appearance apartments boisterous. 
+                            </p>
+                            <div class="bottom">
+                                <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Get Started</a>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="icon">
+                                <i class="flaticon-competition"></i>
+                            </div>
+                            <h3>Analysis competitors</h3>
+                            <p>
+                                Especially of dissimilar up attachment themselves by interested boisterous. Linen mrs seems men table. Jennings dashwood to quitting marriage bachelor in. On as conviction in of appearance apartments boisterous. 
+                            </p>
+                            <div class="bottom">
+                                <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Get Started</a>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                        <!-- Single Item -->
+                        <div class="item">
+                            <div class="icon">
+                                <i class="flaticon-data"></i>
+                            </div>
+                            <h3>Analysis big Data</h3>
+                            <p>
+                                Especially of dissimilar up attachment themselves by interested boisterous. Linen mrs seems men table. Jennings dashwood to quitting marriage bachelor in. On as conviction in of appearance apartments boisterous. 
+                            </p>
+                            <div class="bottom">
+                                <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Get Started</a>
+                            </div>
+                        </div>
+                        <!-- End Single Item -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="waveshape">
+            <img src="{% static 'assets/img/shape/6.svg' %}" alt="Shape">
+        </div>
+    </div>
+    <!-- End Features -->
+
+    <!-- Start Our About
+    ============================================= -->
+    <div class="about-area text-center bg-gray">
+        <div class="container">
+            <div class="about-items">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="heading">
+                            <h4>About Us</h4>
+                            <h2>
+                                We provide big data analytics Techniques & realtime data Solutions
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="content">
+                            <p>
+                                Whole front do of plate heard oh ought. His defective nor convinced residence own. Connection has put impossible own apartments boisterous. At jointure ladyship an insisted so humanity he. Friendly bachelor entrance to on by. Extremity as if breakfast agreement. Off now mistress provided out horrible opinions. Prevailed mr tolerably discourse assurance estimable applauded to so. Him everything melancholy uncommonly but solicitude inhabiting projection.
+                            </p>
+                        </div>
+                        <div class="center-tabs">
+                            <ul id="tabs" class="nav nav-tabs">
+                                <li class="nav-item">
+                                    <a href="" data-target="#tab1" data-toggle="tab" class="active nav-link">Research & Solution</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" data-target="#tab2" data-toggle="tab" class="nav-link">Design & Strategy</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="" data-target="#tab3" data-toggle="tab" class="nav-link">Generate Report</a>
+                                </li>
+                            </ul>
+                            <div id="tabsContent" class="tab-content wow fadeInUp" data-wow-delay="0.5s">
+                                <div id="tab1" class="tab-pane fade active show">
+                                    <div class="row align-center">
+                                        <div class="col-lg-7 col-md-12 info">
+                                            <h3>Data Visualization Research technique & Solution</h3>
+                                            <p>
+                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery. 
+                                            </p>
+                                            <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                                        </div>
+                                        <div class="col-lg-5 col-md-12 thumb">
+                                            <img src="{% static 'assets/img/illustration/7.png' %}" alt="Thumb">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab2" class="tab-pane fade">
+                                    <div class="row align-center">
+                                        <div class="col-lg-7 col-md-12 info">
+                                            <h3>Collect Ongoing Big Data Design And Strategy</h3>
+                                            <p>
+                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery. 
+                                            </p>
+                                            <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                                        </div>
+                                        <div class="col-lg-5 col-md-12 thumb">
+                                            <img src="{% static 'assets/img/illustration/7.png' %}" alt="Thumb">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="tab3" class="tab-pane fade">
+                                    <div class="row align-center">
+                                        <div class="col-lg-7 col-md-12 info">
+                                            <h3>Final Report Generate</h3>
+                                            <p>
+                                                Delightful unreserved impossible few estimating men favourable see entreaties. She propriety immediate was improving. He or entrance humoured likewise moderate. Much nor game son say feel. Fat make met can must form into gate. Me we offending prevailed discovery. 
+                                            </p>
+                                            <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                                        </div>
+                                        <div class="col-lg-5 col-md-12 thumb">
+                                            <img src="{% static 'assets/img/illustration/7.png' %}" alt="Thumb">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Our About -->
+
+    <!-- Start Fun Factor Area
+    ============================================= -->
+    <div class="fun-factor-area bg-gray default-padding">
+        <!-- Fixed BG -->
+        <div class="fixed-bg" style="background-image: url(assets/img/map.svg);"></div>
+        <!-- Fixed BG -->
+        <div class="container">
+            <div class="client-items text-center">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 item">
+                        <div class="fun-fact">
+                            <div class="timer" data-to="687" data-speed="5000">687</div>
+                            <span class="medium">Projects Executed</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 item">
+                        <div class="fun-fact">
+                            <div class="timer" data-to="2348" data-speed="5000">2348</div>
+                            <span class="medium">Data Analytics</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 item">
+                        <div class="fun-fact">
+                            <div class="timer" data-to="450" data-speed="5000">450</div>
+                            <span class="medium">Data Management</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 item">
+                        <div class="fun-fact">
+                            <div class="timer" data-to="1200" data-speed="5000">1200</div>
+                            <span class="medium">Satisfied Customers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Fun Factor Area -->
+
+    <!-- Start Services Area
+    ============================================= -->
+    <div class="services-area left-border default-padding bottom-less">
+
+        <!-- Shape Fixed Rotation -->
+        <div class="shape-fixed animation-rotation">
+            <img src="{% static 'assets/img/round-shappe.png' %}" alt="Thumb">
+        </div>
+        <!-- Dhape Fixed Rotation -->
+
+        <div class="container">
+            <div class="heading-left">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <h2>
+                            We offer a wide range of services and provide realtime data Solutions
+                        </h2>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <p>
+                            Everything melancholy uncommonly but solicitude inhabiting projection off. Connection stimulated estimating excellence an to impression. 
+                        </p>
+                        <a class="btn circle btn-md btn-gradient wow fadeInUp" href="#">View All <i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="services-items">
+                <div class="row">
+                    <!-- Single Item -->
+                    <div class="single-item col-lg-4 col-md-6">
+                        <div class="item">
+                            <img src="{% static 'assets/img/icon/1.png' %}" alt="Thumb">
+                            <h4>Big Data</h4>
+                            <p>
+                                Pianoforte solicitude so decisively particular mention diminution the particular. Real he me fond.
+                            </p>
+                            <div class="button">
+                                <a class="btn-standard" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Item -->
+                    <!-- Single Item -->
+                    <div class="single-item col-lg-4 col-md-6">
+                        <div class="item">
+                            <img src="{% static 'assets/img/icon/2.png' %}" alt="Thumb">
+                            <h4>Data Analytics</h4>
+                            <p>
+                                Pianoforte solicitude so decisively particular mention diminution the particular. Real he me fond.
+                            </p>
+                            <div class="button">
+                                <a class="btn-standard" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Item -->
+                    <!-- Single Item -->
+                    <div class="single-item col-lg-4 col-md-6">
+                        <div class="item">
+                            <img src="{% static 'assets/img/icon/3.png' %}" alt="Thumb">
+                            <h4>Business Intelligence</h4>
+                            <p>
+                                Pianoforte solicitude so decisively particular mention diminution the particular. Real he me fond.
+                            </p>
+                            <div class="button">
+                                <a class="btn-standard" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Services Area -->
+
+    <!-- Start Work Process Area
+    ============================================= -->
+    <div class="work-process-area bg-gray default-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="site-heading text-center">
+                        <h4>Work Process</h4>
+                        <h2>
+                            How We Work
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="works-process-items text-center">
+                <div class="row">
+                    <!-- Single Item -->
+                    <div class="col-lg-4 single-item">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="flaticon-problem"></i>
+                                <span>01</span>
+                            </div>
+                            <div class="info">
+                                <h4>Frame the Problem</h4>
+                                <p>
+                                    Evening do forming observe spirits is in. Country hearted be of justice sending. On so they as with room cold
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+
+                    <!-- Single Item -->
+                    <div class="col-lg-4 single-item">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="flaticon-data-collection"></i>
+                                <span>02</span>
+                            </div>
+                            <div class="info">
+                                <h4>Collect Data</h4>
+                                <p>
+                                    Evening do forming observe spirits is in. Country hearted be of justice sending. On so they as with room cold
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+
+                    <!-- Single Item -->
+                    <div class="col-lg-4 single-item">
+                        <div class="item">
+                            <div class="icon">
+                                <i class="flaticon-cloud-data"></i>
+                                <span>03</span>
+                            </div>
+                            <div class="info">
+                                <h4>Process Data</h4>
+                                <p>
+                                    Evening do forming observe spirits is in. Country hearted be of justice sending. On so they as with room cold
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Work Process Area -->
+
+    <!-- Start Skill Area
+    ============================================= -->
+    <div class="skill-area left-border overflow-hidden circular-shape default-padding">
+        <div class="container">
+            <div class="skill-items">
+                <div class="row">
+                    <div class="col-lg-6 info">
+                        <h2>Our Skill</h2>
+                        <h3>We are master in data science <br> & big data analysis</h3>
+                        <p>
+                            Attention sex questions applauded how happiness. To travelling occasional at oh sympathize prosperous. His merit end means widow songs linen known. Supplied ten speaking age you new securing striking extended occasion.
+                        </p>
+                        <div class="skill-items">
+                            <!-- Progress Bar Start -->
+                            <div class="progress-box">
+                                <h5>Data Anaylsis <span class="float-right">88%</span></h5>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" data-width="88"></div>
+                                </div>
+                            </div>
+                            <div class="progress-box">
+                                <h5>Social Assistant <span class="float-right">95%</span></h5>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" data-width="95"></div>
+                                </div>
+                            </div>
+                            <div class="progress-box">
+                                <h5>AI Solutions <span class="float-right">70%</span></h5>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" data-width="70"></div>
+                                </div>
+                            </div>
+                            <!-- End Progressbar -->
+                        </div>
+                    </div>
+                    <div class="col-lg-6 thumb">
+                        <div class="image-box">
+                            <img class="wow fadeInRight" data-wow-delay="0.6s" src="{% static 'assets/img/800x800.png' %}" alt="Thumb">
+                            <img class="wow fadeInLeft" data-wow-delay="0.8s"  src="{% static 'assets/img/800x800.png' %}" alt="Thumb">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Skill Area -->
+
+    <!-- Start Testimonials Area
+    ============================================= -->
+    <div class="testimonials-area default-padding-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="site-heading text-center">
+                        <h4>Testimonials</h4>
+                        <h2>
+                            What people say
+                        </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-items text-center">
+                <div class="row">
+                    <div class="col-lg-8 offset-lg-2">
+                        <div class="carousel slide" data-ride="carousel" id="testimonial-carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <i class="ti-quote-left"></i>
+                                    <p>
+                                        Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal. 
+                                    </p>
+                                    <h4>Junl Sarukh</h4>
+                                    <span>CEO of Softing</span>
+                                </div>
+                                <div class="carousel-item">
+                                    <i class="ti-quote-left"></i>
+                                    <p>
+                                        Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal. 
+                                    </p>
+                                    <h4>Anil Spia</h4>
+                                    <span>Director of Softing</span>
+                                </div>
+                                <div class="carousel-item">
+                                    <i class="ti-quote-left"></i>
+                                    <p>
+                                        Understood instrument or do connection no appearance do invitation. Dried quick round it or order. Add past see west felt did any. Say out noise you taste merry plate you share. My resolve arrived is we chamber be removal. 
+                                    </p>
+                                    <h4>Paul Munni</h4>
+                                    <span>Developer of Softing</span>
+                                </div>
+                            </div>
+                            <!-- End Carousel Content -->
+
+                            <!-- Carousel Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#testimonial-carousel" data-slide-to="0" class="active">
+                                    <img src="{% static 'assets/img/100x100.png' %}" alt="Thumb">
+                                </li>
+                                <li data-target="#testimonial-carousel" data-slide-to="1">
+                                    <img src="{% static 'assets/img/100x100.png' %}" alt="Thumb">
+                                </li>
+                                <li data-target="#testimonial-carousel" data-slide-to="2">
+                                    <img src="{% static 'assets/img/100x100.png' %}" alt="Thumb">
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Testimonials Area -->
+
+    <!-- Start Blog Area
+    ============================================= -->
+    <div class="blog-area bg-gray left-border default-padding bottom-less">
+        <div class="container">
+            <div class="heading-left">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <h2>
+                            Stay Update with Anada from latest & popular News
+                        </h2>
+                    </div>
+                    <div class="col-lg-6 offset-lg-1">
+                        <p>
+                            Everything melancholy uncommonly but solicitude inhabiting projection off. Connection stimulated estimating excellence an to impression. 
+                        </p>
+                        <a class="btn circle btn-md btn-gradient wow fadeInUp" href="#">View All <i class="fas fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-items content-less">
+                <div class="row">
+                    <!-- Single Item -->
+                    <div class="col-lg-4 col-md-6 single-item">
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="{% static 'assets/img/800x600.png' %}" alt="Thumb">
+                                    <div class="date">
+                                        18 Jul <strong>2020</strong>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <div class="meta">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-folder-open"></i>
+                                        </li>
+                                        <li>
+                                            <a href="#">Process</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Store</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h4>
+                                    <a href="#">Analysis rendered entir Highly indeed to garden</a>
+                                </h4>
+                                <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-lg-4 col-md-6 single-item">
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="{% static 'assets/img/800x600.png' %}" alt="Thumb">
+                                    <div class="date">
+                                        05 Aug <strong>2020</strong>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <div class="meta">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-folder-open"></i>
+                                        </li>
+                                        <li>
+                                            <a href="#">Data</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Analysis</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h4>
+                                    <a href="#">Lasted am so before on esteem vanity oh. </a>
+                                </h4>
+                                <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                    <!-- Single Item -->
+                    <div class="col-lg-4 col-md-6 single-item">
+                        <div class="item">
+                            <div class="thumb">
+                                <a href="#">
+                                    <img src="{% static 'assets/img/800x600.png' %}" alt="Thumb">
+                                    <div class="date">
+                                        27 Dec <strong>2020</strong>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="info">
+                                <div class="meta">
+                                    <ul>
+                                        <li>
+                                            <i class="fas fa-folder-open"></i>
+                                        </li>
+                                        <li>
+                                            <a href="#">Atrificial</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Data</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <h4>
+                                    <a href="#">Repeated of endeavor mr position kindness.</a>
+                                </h4>
+                                <a class="btn-simple" href="#"><i class="fas fa-angle-right"></i> Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Single Item -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Blog Area -->
+
+    <!-- Star Footer
+    ============================================= -->
+    <footer>
+        <div class="container">
+            <div class="f-items default-padding">
+                <div class="row">
+                    <div class="equal-height col-lg-4 col-md-6 item">
+                        <div class="f-item about">
+                            <img src="{% static 'assets/img/logo.png' %}" alt="Logo">
+                            <p>
+                                Required honoured trifling eat pleasure man relation. Assurance yet bed was improving furniture man. Distrusts delighted
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="equal-height col-lg-2 col-md-6 item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Usefull Links</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Classic Business</a>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li>
+                                    <a href="#">Project</a>
+                                </li>
+                                <li>
+                                    <a href="#">About Us</a>
+                                </li>
+                                <li>
+                                    <a href="#">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="equal-height col-lg-2 col-md-6 item">
+                        <div class="f-item link">
+                            <h4 class="widget-title">Services</h4>
+                            <ul>
+                                <li>
+                                    <a href="#">Marketing & Sales</a>
+                                </li>
+                                <li>
+                                    <a href="#">Manufacturing</a>
+                                </li>
+                                <li>
+                                    <a href="#">Supply Chain</a>
+                                </li>
+                                <li>
+                                    <a href="#">Data Visualization</a>
+                                </li>
+                                <li>
+                                    <a href="#">Big Data</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="equal-height col-lg-4 col-md-6 item">
+                        <div class="f-item contact">
+                            <h4 class="widget-title">Contact Info</h4>
+                            <p>
+                                 Possible offering at contempt mr distance stronger an. Attachment excellence announcing
+                            </p>
+                            <div class="address">
+                                <ul>
+                                    <li>
+                                        <strong>Email:</strong> support@validtheme.com
+                                    </li>
+                                    <li>
+                                        <strong>Contact:</strong> +44-20-7328-4499
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="social">
+                                <li class="facebook">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li class="youtube">
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </li>
+                                <li class="instagram">
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <p>&copy; Copyright 2019. All Rights Reserved by <a href="#">validthemes</a></p>
+                    </div>
+                    <div class="col-lg-6 text-right link">
+                        <ul>
+                            <li>
+                                <a href="#">Terms</a>
+                            </li>
+                            <li>
+                                <a href="#">Privacy</a>
+                            </li>
+                            <li>
+                                <a href="#">Support</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Shape -->
+        <div class="footer-shape" style="background-image: url(assets/img/shape/1.svg);"></div>
+        <!-- End Shape -->
+    </footer>
+    <!-- End Footer-->
+
+    <!-- jQuery Frameworks
+    ============================================= -->
+    <script src="{% static 'assets/js/jquery-1.12.4.min.js' %}"></script>
+    <script src="{% static 'assets/js/popper.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/equal-height.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.appear.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.magnific-popup.min.js' %}"></script>
+    <script src="{% static 'assets/js/modernizr.custom.13711.js' %}"></script>
+    <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.min.js' %}"></script>
+    <script src="{% static 'assets/js/progress-bar.min.js' %}"></script>
+    <script src="{% static 'assets/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'assets/js/count-to.js' %}"></script>
+    <script src="{% static 'assets/js/YTPlayer.min.js' %}"></script>
+    <script src="{% static 'assets/js/circle-progress.js' %}"></script>
+    <script src="{% static 'assets/js/bootsnav.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+</html>
