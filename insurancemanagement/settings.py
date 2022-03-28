@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+    'insurancemanagement.apps.CustomAdminConfig',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'paypal.standard.ipn', 
     'insurance',
     'customer',
+    'bulma',
+    'import_export',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,1184 @@
+{
+  "RECORDS": [
+    {
+      "id": 1,
+      "url_hash": "78383652",
+      "url": "https://www.autoevolution.com/ac/",
+      "name": "AC",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/ac-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 2,
+      "url_hash": "6a1df75c",
+      "url": "https://www.autoevolution.com/acura/",
+      "name": "ACURA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/acura-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 3,
+      "url_hash": "0608c25a",
+      "url": "https://www.autoevolution.com/alfa-romeo/",
+      "name": "ALFA ROMEO",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/alfa-romeo-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 4,
+      "url_hash": "a829c754",
+      "url": "https://www.autoevolution.com/alpine/",
+      "name": "ALPINE",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/alpine-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 5,
+      "url_hash": "85a1d7e1",
+      "url": "https://www.autoevolution.com/ariel/",
+      "name": "ARIEL",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/ariel-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 6,
+      "url_hash": "c4aba20b",
+      "url": "https://www.autoevolution.com/aro/",
+      "name": "ARO",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/aro-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 7,
+      "url_hash": "d519e48e",
+      "url": "https://www.autoevolution.com/artega/",
+      "name": "ARTEGA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/artega-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 8,
+      "url_hash": "bf4a9110",
+      "url": "https://www.autoevolution.com/aston-martin/",
+      "name": "ASTON MARTIN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/aston-martin-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 9,
+      "url_hash": "47f8c52c",
+      "url": "https://www.autoevolution.com/audi/",
+      "name": "AUDI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/audi-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 10,
+      "url_hash": "1de3e1c4",
+      "url": "https://www.autoevolution.com/aurus/",
+      "name": "AURUS",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/aurus-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 11,
+      "url_hash": "a74b45fb",
+      "url": "https://www.autoevolution.com/bentley/",
+      "name": "BENTLEY",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/bentley-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 12,
+      "url_hash": "362a88e7",
+      "url": "https://www.autoevolution.com/bmw/",
+      "name": "BMW",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/bmw-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 13,
+      "url_hash": "2e438fcb",
+      "url": "https://www.autoevolution.com/bristol/",
+      "name": "BRISTOL",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/bristol-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 14,
+      "url_hash": "f26785db",
+      "url": "https://www.autoevolution.com/bufori/",
+      "name": "BUFORI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/bufori-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 15,
+      "url_hash": "9c7a8937",
+      "url": "https://www.autoevolution.com/bugatti/",
+      "name": "BUGATTI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/bugatti-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 16,
+      "url_hash": "71085004",
+      "url": "https://www.autoevolution.com/buick/",
+      "name": "BUICK",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/buick-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 17,
+      "url_hash": "6e8c9923",
+      "url": "https://www.autoevolution.com/cadillac/",
+      "name": "CADILLAC",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/cadillac-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 18,
+      "url_hash": "e0d0b513",
+      "url": "https://www.autoevolution.com/caterham/",
+      "name": "CATERHAM",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/caterham-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 19,
+      "url_hash": "5821495d",
+      "url": "https://www.autoevolution.com/chevrolet/",
+      "name": "CHEVROLET",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/chevrolet-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 20,
+      "url_hash": "7d1747a7",
+      "url": "https://www.autoevolution.com/chrysler/",
+      "name": "CHRYSLER",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/chrysler-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 21,
+      "url_hash": "e1f11746",
+      "url": "https://www.autoevolution.com/citroen/",
+      "name": "CITROEN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/citroen-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 22,
+      "url_hash": "bd9303fb",
+      "url": "https://www.autoevolution.com/cupra/",
+      "name": "CUPRA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/cupra-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 23,
+      "url_hash": "56fab89f",
+      "url": "https://www.autoevolution.com/dacia/",
+      "name": "DACIA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/dacia-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 24,
+      "url_hash": "bfe59c83",
+      "url": "https://www.autoevolution.com/daewoo/",
+      "name": "DAEWOO",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/daewoo-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 25,
+      "url_hash": "24a09027",
+      "url": "https://www.autoevolution.com/daihatsu/",
+      "name": "DAIHATSU",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/daihatsu-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 26,
+      "url_hash": "a1f451f7",
+      "url": "https://www.autoevolution.com/datsun/",
+      "name": "DATSUN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/datsun-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 27,
+      "url_hash": "50f41272",
+      "url": "https://www.autoevolution.com/dmc/",
+      "name": "DeLorean",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/delorean-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 28,
+      "url_hash": "21e10f3f",
+      "url": "https://www.autoevolution.com/dodge/",
+      "name": "DODGE",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/dodge-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 29,
+      "url_hash": "c1067a9e",
+      "url": "https://www.autoevolution.com/donkervoort/",
+      "name": "DONKERVOORT",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/donkervoort-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 30,
+      "url_hash": "8235d36c",
+      "url": "https://www.autoevolution.com/dr-motor/",
+      "name": "DR MOTOR",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/dr-motor-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 31,
+      "url_hash": "a035ea96",
+      "url": "https://www.autoevolution.com/ds-automobiles/",
+      "name": "DS AUTOMOBILES",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/ds-automobiles-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 32,
+      "url_hash": "1984fbbb",
+      "url": "https://www.autoevolution.com/eagle/",
+      "name": "EAGLE",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/eagle-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 33,
+      "url_hash": "f8a7ee71",
+      "url": "https://www.autoevolution.com/ferrari/",
+      "name": "FERRARI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/ferrari-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 34,
+      "url_hash": "500cb3ae",
+      "url": "https://www.autoevolution.com/fiat/",
+      "name": "FIAT",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/fiat-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 35,
+      "url_hash": "66e01587",
+      "url": "https://www.autoevolution.com/fisker/",
+      "name": "FISKER",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/fisker-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 36,
+      "url_hash": "66ceee61",
+      "url": "https://www.autoevolution.com/ford/",
+      "name": "FORD",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/ford-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 37,
+      "url_hash": "28f9f816",
+      "url": "https://www.autoevolution.com/fso/",
+      "name": "FSO",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/fso-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 38,
+      "url_hash": "5bcc78ce",
+      "url": "https://www.autoevolution.com/geely/",
+      "name": "GEELY",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/geely-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 39,
+      "url_hash": "c8d01c31",
+      "url": "https://www.autoevolution.com/genesis/",
+      "name": "GENESIS",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/genesis-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 40,
+      "url_hash": "3e466512",
+      "url": "https://www.autoevolution.com/gmc/",
+      "name": "GMC",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/gmc-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 41,
+      "url_hash": "ca1b3677",
+      "url": "https://www.autoevolution.com/gta-motor/",
+      "name": "GTA Motor",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/gta-motor-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 42,
+      "url_hash": "50756aed",
+      "url": "https://www.autoevolution.com/hindustan/",
+      "name": "HINDUSTAN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/hindustan-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 43,
+      "url_hash": "d664630a",
+      "url": "https://www.autoevolution.com/holden/",
+      "name": "HOLDEN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/holden-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 44,
+      "url_hash": "f2db5288",
+      "url": "https://www.autoevolution.com/honda/",
+      "name": "HONDA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/honda-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 45,
+      "url_hash": "094385e0",
+      "url": "https://www.autoevolution.com/hummer/",
+      "name": "HUMMER",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/hummer-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 46,
+      "url_hash": "bedfdcc8",
+      "url": "https://www.autoevolution.com/hyundai/",
+      "name": "HYUNDAI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/hyundai-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 47,
+      "url_hash": "e3d29582",
+      "url": "https://www.autoevolution.com/infiniti/",
+      "name": "INFINITI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/infiniti-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 48,
+      "url_hash": "24a6d55d",
+      "url": "https://www.autoevolution.com/isuzu/",
+      "name": "ISUZU",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/isuzu-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 49,
+      "url_hash": "55a3a57e",
+      "url": "https://www.autoevolution.com/jaguar/",
+      "name": "JAGUAR",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/jaguar-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 50,
+      "url_hash": "6fcff708",
+      "url": "https://www.autoevolution.com/jeep/",
+      "name": "JEEP",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/jeep-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 51,
+      "url_hash": "f6b63b2b",
+      "url": "https://www.autoevolution.com/karma/",
+      "name": "Karma",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/karma-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 52,
+      "url_hash": "22beea30",
+      "url": "https://www.autoevolution.com/kia/",
+      "name": "KIA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/kia-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 53,
+      "url_hash": "8e03e045",
+      "url": "https://www.autoevolution.com/koenigsegg/",
+      "name": "KOENIGSEGG",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/koenigsegg-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 54,
+      "url_hash": "0a6e73ea",
+      "url": "https://www.autoevolution.com/ktm/",
+      "name": "KTM",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/ktm-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 55,
+      "url_hash": "bb397c05",
+      "url": "https://www.autoevolution.com/lada/",
+      "name": "LADA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/lada-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 56,
+      "url_hash": "8ec4167b",
+      "url": "https://www.autoevolution.com/lamborghini/",
+      "name": "LAMBORGHINI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/lamborghini-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 57,
+      "url_hash": "8847f78a",
+      "url": "https://www.autoevolution.com/lancia/",
+      "name": "LANCIA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/lancia-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 58,
+      "url_hash": "1e3865db",
+      "url": "https://www.autoevolution.com/land-rover/",
+      "name": "LAND ROVER",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/land-rover-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 59,
+      "url_hash": "9a0e0bac",
+      "url": "https://www.autoevolution.com/lexus/",
+      "name": "LEXUS",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/lexus-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 60,
+      "url_hash": "273dac88",
+      "url": "https://www.autoevolution.com/lincoln/",
+      "name": "LINCOLN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/lincoln-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 61,
+      "url_hash": "8912e7fa",
+      "url": "https://www.autoevolution.com/lotus/",
+      "name": "LOTUS",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/lotus-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 62,
+      "url_hash": "49648178",
+      "url": "https://www.autoevolution.com/lucid-motors/",
+      "name": "Lucid Motors",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/lucid-motors-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 63,
+      "url_hash": "927b1e16",
+      "url": "https://www.autoevolution.com/mahindra/",
+      "name": "Mahindra",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/mahindra-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 64,
+      "url_hash": "98a3dc88",
+      "url": "https://www.autoevolution.com/marussia-motors/",
+      "name": "MARUSSIA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/marussia-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 65,
+      "url_hash": "e53c5e29",
+      "url": "https://www.autoevolution.com/maruti-suzuki/",
+      "name": "MARUTI SUZUKI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/maruti-suzuki-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 66,
+      "url_hash": "d0e5802b",
+      "url": "https://www.autoevolution.com/maserati/",
+      "name": "MASERATI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/maserati-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 67,
+      "url_hash": "0475bdc9",
+      "url": "https://www.autoevolution.com/maybach/",
+      "name": "MAYBACH",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/maybach-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 68,
+      "url_hash": "53c93c87",
+      "url": "https://www.autoevolution.com/mazda/",
+      "name": "MAZDA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/mazda-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 69,
+      "url_hash": "6734ab3b",
+      "url": "https://www.autoevolution.com/mclaren/",
+      "name": "MCLAREN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/mclaren-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 70,
+      "url_hash": "09f234aa",
+      "url": "https://www.autoevolution.com/mercedes-benz/",
+      "name": "MERCEDES BENZ",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/mercedes-benz-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 71,
+      "url_hash": "4b4e9ce2",
+      "url": "https://www.autoevolution.com/mercedes-amg/",
+      "name": "Mercedes-AMG",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/mercedes-amg-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 72,
+      "url_hash": "ac8cef18",
+      "url": "https://www.autoevolution.com/mercury/",
+      "name": "MERCURY",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/mercury-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 73,
+      "url_hash": "f5cfb51e",
+      "url": "https://www.autoevolution.com/mg/",
+      "name": "MG",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/mg-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 74,
+      "url_hash": "58b8a732",
+      "url": "https://www.autoevolution.com/mini/",
+      "name": "MINI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/mini-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 75,
+      "url_hash": "63ef8a2d",
+      "url": "https://www.autoevolution.com/mitsubishi/",
+      "name": "MITSUBISHI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/mitsubishi-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 76,
+      "url_hash": "d5f4686b",
+      "url": "https://www.autoevolution.com/morgan/",
+      "name": "MORGAN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/morgan-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 77,
+      "url_hash": "6494ecff",
+      "url": "https://www.autoevolution.com/nio/",
+      "name": "NIO",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/nio-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 78,
+      "url_hash": "dd658d22",
+      "url": "https://www.autoevolution.com/nissan/",
+      "name": "NISSAN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/nissan-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 79,
+      "url_hash": "34c19092",
+      "url": "https://www.autoevolution.com/oldsmobile/",
+      "name": "OLDSMOBILE",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/oldsmobile-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 80,
+      "url_hash": "9829bfe9",
+      "url": "https://www.autoevolution.com/opel/",
+      "name": "OPEL",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/opel-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 81,
+      "url_hash": "c43a9d1d",
+      "url": "https://www.autoevolution.com/pagani/",
+      "name": "PAGANI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/pagani-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 82,
+      "url_hash": "b9270af0",
+      "url": "https://www.autoevolution.com/panoz/",
+      "name": "PANOZ",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/panoz-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 83,
+      "url_hash": "49e82a85",
+      "url": "https://www.autoevolution.com/perodua/",
+      "name": "PERODUA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/perodua-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 84,
+      "url_hash": "b0d9e4ce",
+      "url": "https://www.autoevolution.com/peugeot/",
+      "name": "PEUGEOT",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/peugeot-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 85,
+      "url_hash": "222e13ea",
+      "url": "https://www.autoevolution.com/pininfarina/",
+      "name": "Pininfarina",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/pininfarina-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 86,
+      "url_hash": "0e3a40a9",
+      "url": "https://www.autoevolution.com/plymouth/",
+      "name": "PLYMOUTH",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/plymouth-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 87,
+      "url_hash": "25962213",
+      "url": "https://www.autoevolution.com/polestar/",
+      "name": "Polestar",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/polestar-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 88,
+      "url_hash": "dcdc5891",
+      "url": "https://www.autoevolution.com/pontiac/",
+      "name": "PONTIAC",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/pontiac-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 89,
+      "url_hash": "15a421c6",
+      "url": "https://www.autoevolution.com/porsche/",
+      "name": "PORSCHE",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/porsche-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 90,
+      "url_hash": "91c9d6a6",
+      "url": "https://www.autoevolution.com/proton/",
+      "name": "PROTON",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/proton-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 91,
+      "url_hash": "7c1a7f32",
+      "url": "https://www.autoevolution.com/qoros/",
+      "name": "QOROS",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/qoros-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 92,
+      "url_hash": "b2979304",
+      "url": "https://www.autoevolution.com/ram-trucks/",
+      "name": "RAM Trucks",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/ram-trucks-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 93,
+      "url_hash": "e8424d7c",
+      "url": "https://www.autoevolution.com/renault/",
+      "name": "RENAULT",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/renault-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 94,
+      "url_hash": "7a2d4755",
+      "url": "https://www.autoevolution.com/rivian/",
+      "name": "RIVIAN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/rivian-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 95,
+      "url_hash": "f40f793f",
+      "url": "https://www.autoevolution.com/rolls-royce/",
+      "name": "ROLLS-ROYCE",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/rolls-royce-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 96,
+      "url_hash": "ed5af548",
+      "url": "https://www.autoevolution.com/saab/",
+      "name": "SAAB",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/saab-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 97,
+      "url_hash": "a88e0c11",
+      "url": "https://www.autoevolution.com/saleen/",
+      "name": "SALEEN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/saleen-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 98,
+      "url_hash": "8168cb43",
+      "url": "https://www.autoevolution.com/samsung/",
+      "name": "SAMSUNG",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/samsung-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 99,
+      "url_hash": "1d8a67fb",
+      "url": "https://www.autoevolution.com/santana/",
+      "name": "SANTANA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/santana-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 100,
+      "url_hash": "e425a23c",
+      "url": "https://www.autoevolution.com/saturn/",
+      "name": "SATURN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/saturn-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 101,
+      "url_hash": "fabb9f06",
+      "url": "https://www.autoevolution.com/scion/",
+      "name": "SCION",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/scion-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 102,
+      "url_hash": "5d3287c1",
+      "url": "https://www.autoevolution.com/seat/",
+      "name": "SEAT",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/seat-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 103,
+      "url_hash": "b974b236",
+      "url": "https://www.autoevolution.com/skoda/",
+      "name": "SKODA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/skoda-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 104,
+      "url_hash": "f29c6c23",
+      "url": "https://www.autoevolution.com/smart/",
+      "name": "SMART",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/smart-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 105,
+      "url_hash": "dba676b0",
+      "url": "https://www.autoevolution.com/spyker/",
+      "name": "SPYKER",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/spyker-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 106,
+      "url_hash": "fcc0c6b0",
+      "url": "https://www.autoevolution.com/ssang-yong/",
+      "name": "SSANGYONG",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/ssangyong-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 107,
+      "url_hash": "927e6cb4",
+      "url": "https://www.autoevolution.com/subaru/",
+      "name": "SUBARU",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/subaru-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 108,
+      "url_hash": "19ef1c30",
+      "url": "https://www.autoevolution.com/suzuki/",
+      "name": "SUZUKI",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/suzuki-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 109,
+      "url_hash": "3b783730",
+      "url": "https://www.autoevolution.com/tata-motors/",
+      "name": "TATA MOTORS",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/tata-motors-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 110,
+      "url_hash": "b188d7f4",
+      "url": "https://www.autoevolution.com/tesla-motors/",
+      "name": "TESLA MOTORS",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/tesla-motors-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 111,
+      "url_hash": "b6ccd774",
+      "url": "https://www.autoevolution.com/toyota/",
+      "name": "TOYOTA",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/toyota-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 112,
+      "url_hash": "fdda6856",
+      "url": "https://www.autoevolution.com/tvr/",
+      "name": "TVR",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/tvr-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 113,
+      "url_hash": "b660afc4",
+      "url": "https://www.autoevolution.com/vauxhall/",
+      "name": "VAUXHALL",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/vauxhall-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 114,
+      "url_hash": "5fae2a20",
+      "url": "https://www.autoevolution.com/volkswagen/",
+      "name": "VOLKSWAGEN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/volkswagen-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 115,
+      "url_hash": "46101c70",
+      "url": "https://www.autoevolution.com/volvo/",
+      "name": "VOLVO",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/volvo-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 116,
+      "url_hash": "65bfd33a",
+      "url": "https://www.autoevolution.com/wiesmann/",
+      "name": "WIESMANN",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/wiesmann-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 117,
+      "url_hash": "fa0488d0",
+      "url": "https://www.autoevolution.com/zender/",
+      "name": "ZENDER",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/zender-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    },
+    {
+      "id": 118,
+      "url_hash": "a3ae15aa",
+      "url": "https://www.autoevolution.com/zenvo/",
+      "name": "Zenvo",
+      "logo": "https://s1.cdn.autoevolution.com/images/producers/zenvo-sm.jpg",
+      "deleted_at": null,
+      "created_at": "8/12/2021 14:13:31",
+      "updated_at": "8/12/2021 14:13:31"
+    }
+  ]
+}

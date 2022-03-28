@@ -52,6 +52,57 @@ from django.http.response import JsonResponse
 from .chat import get_response, predict_class
 import fitz
 
+def auto_correction_word(bad_word,model_path,data_path):
+    from tensorflow.keras.preprocessing.sequence import pad_sequences
+    from tensorflow.keras.preprocessing.text import Tokenizer
+    from tensorflow import keras
+    import numpy as np
+    model = keras.models.load_model(model_path)
+    tokenizer = Tokenizer()
+    data = open(data_path, encoding="utf8").read()
+    corpus = data.split("\n")
+    for i in corpus:
+        if i == "":
+            corpus.remove('')
+    corpus = corpus[1:-1]
+    corpus_new = []
+    for st in corpus:
+        ch = " ".join(st)
+        corpus_new.append(ch)
+    tokenizer.fit_on_texts(corpus_new)
+    total_words = len(tokenizer.word_index) + 1
+    #############################################################################
+    input_sequences = []
+    for line in corpus_new:
+        token_list = tokenizer.texts_to_sequences([line])[0]
+        for i in range(1, len(token_list)):
+            n_gram_sequence = token_list[:i + 1]
+            input_sequences.append(n_gram_sequence)
+
+    # pad sequences
+    max_sequence_len = max([len(x) for x in input_sequences])
+    input_sequences = np.array(pad_sequences(input_sequences, maxlen=max_sequence_len, padding='pre'))
+    counter = len(bad_word)
+    for i in range(counter):
+        if (ord(bad_word[i]) in [i for i in range(285)]) == True:
+            seed_text = " ".join(bad_word[:i])
+            noTraited_text = " ".join(bad_word[i + 1:])
+            next_words = 100
+
+            for _ in range(next_words):
+                token_list = tokenizer.texts_to_sequences([seed_text])[0]
+                token_list = pad_sequences([token_list], maxlen=max_sequence_len - 1, padding='pre')
+                #     predicted = model.predict_classes(token_list, verbose=0)
+                predicted = np.argmax(model.predict(token_list), axis=1)
+                output_word = ""
+                for word, index in tokenizer.word_index.items():
+                    if index == predicted:
+                        output_word = word
+                        break
+            seed_text += " " + output_word + " " + noTraited_text
+            bad_word = "".join(seed_text.split())
+    return bad_word
+
 def grayscale(image):
     return cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 # Réduction de bruits
@@ -246,7 +297,7 @@ def stripe_webhook(request):
         user_dir = os.path.join(settings.MEDIA_ROOT, "customer_{}".format(customer_id))
         invoice_path = os.path.join(user_dir,"INV-{}{}.pdf".format(customer_id,policy_record.id))
         contract_path = os.path.join(user_dir,"contrat_{}_{}.pdf".format(customer_id,policy_record.id))
-        signature_path = r'C:\Users\MSI\Downloads\signature.png'
+        signature_path = os.path.join(settings.BASE_DIR,"signature.png")
         signature_add(invoice_path,signature_path,3000,950,0.6,0.9) 
         signature_add(contract_path,signature_path,3100,1200,0.6,0.9) 
         if customer.email_notifications:
@@ -310,7 +361,7 @@ def predict_view(request):
     if request.method=='POST':
         text=json.load(request)['message']
         ints=predict_class(text)
-        intents = json.loads(open(r'C:\Users\MSI\Downloads\intents.json').read())
+        intents = json.loads(open('intents.json').read())
         response =get_response(ints,intents)
         message={'answer':response}
         return JsonResponse(message)
@@ -399,20 +450,21 @@ def apply_view(request,pk):
         user_dir = os.path.join(settings.MEDIA_ROOT, "customer_{}".format(request.user.id))
         os.makedirs(user_dir,exist_ok=True)
         try:
+            file_path = os.path.join(r'C:\Users\MSI', 'Downloads') ##### change your path here
             cin_recto = request.FILES[u'cin_recto']
-            cinrecto = cv2.imread(os.path.join(r'C:\Users\MSI\Downloads', cin_recto._get_name()))
+            cinrecto = cv2.imread(os.path.join(file_path, cin_recto._get_name()))
             cinrecto_path = os.path.join(user_dir,"cin_recto_{}.jpg".format(request.user.id))
             cv2.imwrite(cinrecto_path,cinrecto)
             cin_verso = request.FILES[u'cin_verso']
-            cinverso = cv2.imread(os.path.join(r'C:\Users\MSI\Downloads', cin_verso._get_name()))
+            cinverso = cv2.imread(os.path.join(file_path, cin_verso._get_name()))
             cinverso_path = os.path.join(user_dir,"cin_verso_{}.jpg".format(request.user.id))
             cv2.imwrite(cinverso_path,cinverso)
             carte_grise = request.FILES[u'carte_grise']
-            cartegriserecto = cv2.imread(os.path.join(r'C:\Users\MSI\Downloads', carte_grise._get_name()))
+            cartegriserecto = cv2.imread(os.path.join(file_path, carte_grise._get_name()))
             cartegriserecto_path = os.path.join(user_dir,"carte_grise_recto_{}.jpg".format(request.user.id))
             cv2.imwrite(cartegriserecto_path,cartegriserecto)
             carte_grise_verso = request.FILES[u'carte_grise_verso']
-            cartegriseverso = cv2.imread(os.path.join(r'C:\Users\MSI\Downloads', carte_grise_verso._get_name()))
+            cartegriseverso = cv2.imread(os.path.join(file_path, carte_grise_verso._get_name()))
             cartegriseverso_path = os.path.join(user_dir,"carte_grise_verso_{}.jpg".format(request.user.id))
             cv2.imwrite(cartegriseverso_path,cartegriseverso)
         except MultiValueDictKeyError:
@@ -430,19 +482,18 @@ def apply_view(request,pk):
         cartegriserecto_path = os.path.join(user_dir,"carte_grise_recto_{}.jpg".format(request.user.id))
         cartegriseverso_path = os.path.join(user_dir,"carte_grise_verso_{}.jpg".format(request.user.id))
         angle, rotated = correct_orientation(cinrecto)
-        #rotated = cv2.cvtColor(rotated, cv2.COLOR_BGR2GRAY)
-        cv2.imwrite(r'C:\Users\MSI\Downloads\rotated.png', rotated)
+        cv2.imwrite('rotated.png', rotated)
         ### face detection and virtual contour
         try :
-            subprocess.call('curl -H "apikey:K86104006488957" -o "C:\\Users\\MSI\\Desktop\\processed.json" --form "detectOrientation=true" --form "file=@C:\\Users\\MSI\\Downloads\\rotated.png" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
-            with open(r'C:\Users\MSI\Desktop\processed.json', encoding='utf-8') as f:
+            subprocess.call('curl -H "apikey:K86104006488957" -o "processed.json" --form "detectOrientation=true" --form "file=@rotated.png" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
+            with open('processed.json', encoding='utf-8') as f:
                 data=json.load(f)
         except subprocess.TimeoutExpired :
             data = []
         # Load the cascade
-        face_cascade = cv2.CascadeClassifier(r'C:\Users\MSI\Downloads\haar.xml')
+        face_cascade = cv2.CascadeClassifier('haar.xml')
         # Read the input image
-        img = cv2.imread(r'C:\Users\MSI\Downloads\rotated.png')
+        img = cv2.imread('rotated.png')
         # Convert into grayscale
         gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
         # Detect faces
@@ -456,7 +507,7 @@ def apply_view(request,pk):
             left = [int(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'][0]['Left']) for i in range(l)]
         except (IndexError, KeyError, TypeError):
             print("Server not responding...\nTrying another method")
-            results=arabicocr.arabic_ocr(r'C:\Users\MSI\Downloads\rotated.png',r'C:\Users\MSI\Desktop\arabicocr_output.png')
+            results=arabicocr.arabic_ocr('rotated.png','arabicocr_output.png')
             top = [int(results[i][0][0][1]) for i in range(len(results))]
             left = [int(results[i][0][0][0]) for i in range(len(results))]
         max_top, max_left = max(top), max(left)
@@ -464,18 +515,18 @@ def apply_view(request,pk):
         img_arr = img_arr[y-int(h/2)-10 : max_top+10, x+w : max_left]
         angle, img_arr = correct_orientation(img_arr)
         # Display the output
-        cv2.imwrite(r'C:\Users\MSI\Downloads\processed.png',img_arr)
+        cv2.imwrite('processed.png',img_arr)
         ### threshold
         imgFloat = img_arr.astype(np.float) / 255.
         kChannel = 1 - np.max(imgFloat, axis=2)
         kChannel = (255 * kChannel).astype(np.uint8)
-        binaryThresh = 150
+        binaryThresh = 135
         _, binaryImage = cv2.threshold(kChannel, binaryThresh, 255, cv2.THRESH_BINARY)
-        cv2.imwrite(r'C:\Users\MSI\Downloads\binary.png',binaryImage)
+        cv2.imwrite('binary.png',binaryImage)
         ### extract information
         try:
-            subprocess.call('curl -H "apikey:K86104006488957" -o "C:\\Users\\MSI\\Desktop\\processed.json" --form "detectOrientation=true" --form "file=@C:\\Users\\MSI\\Downloads\\processed.png" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
-            with open(r'C:\Users\MSI\Desktop\processed.json', encoding='utf-8') as f:
+            subprocess.call('curl -H "apikey:K86104006488957" -o "processed.json" --form "detectOrientation=true" --form "file=@processed.png" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
+            with open('processed.json', encoding='utf-8') as f:
                 data=json.load(f)
         except subprocess.TimeoutExpired :
             data = []
@@ -487,20 +538,32 @@ def apply_view(request,pk):
                 recto.append(line)
         except (IndexError, KeyError, TypeError) :
             print("Server not responding...\nTrying another method")
-            results=arabicocr.arabic_ocr(r'C:\Users\MSI\Downloads\binary.png',r'C:\Users\MSI\Desktop\arabicocr_output.png')
+            results=arabicocr.arabic_ocr('binary.png','arabicocr_output.png')
             text = correct_ocr_order(results,18)
             recto = [text[i][0] for i in range(len(text))]
         cin = arabic_reshaper.reshape(correct_ocr_output(recto[0]))
         try:
-            nom = arabic_reshaper.reshape(recto[2]) + ' ' + arabic_reshaper.reshape(recto[1])
-        except IndexError:
-            nom = arabic_reshaper.reshape(recto[1])
+            s = recto[2]
+        except :
+            _, binaryImage = cv2.threshold(kChannel, binaryThresh+20, 255, cv2.THRESH_BINARY)
+            cv2.imwrite('binary.png',binaryImage)
+            results=arabicocr.arabic_ocr('binary.png','arabicocr_output.png')
+            text = correct_ocr_order(results)
+            recto = [text[i][0] for i in range(len(text))]
+        try:
+            fname, lname = correct_ocr_output(recto[2].replace("ى","ي")), correct_ocr_output(recto[1].replace("ى","ي"))
+            nom = arabic_reshaper.reshape(auto_correction_word(fname,'model_first_name','first_name.csv')) + ' ' + arabic_reshaper.reshape(auto_correction_word(lname,'model_last_name','last_name.csv'))
+        except:
+            nom = correct_ocr_output(recto[1].replace("ى","ي"))
+            nom = arabic_reshaper.reshape(auto_correction_word(nom,'model_first_name','first_name.csv'))
         ######### CIN verso ###########
+        angle, rotated = correct_orientation(cinverso)
+        cv2.imwrite('rotated.png', rotated)
         img_arr = np.array(cinverso)
         ### virtual contour
         try:
-            subprocess.call('curl -H "apikey:K86104006488957" -o "C:\\Users\\MSI\\Desktop\\processed1.json" --form "detectOrientation=true" --form "file=@C:\\Users\\MSI\\Downloads\\verso.jpg" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
-            with open(r'C:\Users\MSI\Desktop\processed1.json', encoding='utf-8') as f:
+            subprocess.call('curl -H "apikey:K86104006488957" -o "processed1.json" --form "detectOrientation=true" --form "file=@rotated.png" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
+            with open('processed1.json', encoding='utf-8') as f:
                 data=json.load(f)
         except subprocess.TimeoutExpired :
             data = []
@@ -509,8 +572,8 @@ def apply_view(request,pk):
             l = len(data['ParsedResults'][0]['TextOverlay']['Lines'])
             top = [int(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'][len(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'])-1]['Top']) for i in range(l)]
             left = [int(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'][len(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'])-1]['Left']) for i in range(l)]
-        except (IndexError, KeyError, NameError, TypeError):
-                results=arabicocr.arabic_ocr(cinverso_path,r'C:\Users\MSI\Desktop\arabicocr_output.png')
+        except :
+                results=arabicocr.arabic_ocr(cinverso_path,'arabicocr_output.png')
                 top, left = [], []
                 for i in range(len(results)):
                     for j in range(4):
@@ -519,18 +582,18 @@ def apply_view(request,pk):
         max_top, max_left, min_top, min_left = max(top), max(left), min(top), min(left)
         img_arr = img_arr[min_top : max_top, min_left : max_left]
         # Display the output
-        cv2.imwrite(r'C:\Users\MSI\Downloads\processed1.jpg',img_arr)
+        cv2.imwrite('processed1.jpg',img_arr)
         ### threshold
         imgFloat = img_arr.astype(np.float) / 255.
         kChannel = 1 - np.max(imgFloat, axis=2)
         kChannel = (255 * kChannel).astype(np.uint8)
         binaryThresh = 120
         _, binaryImage = cv2.threshold(kChannel, binaryThresh, 255, cv2.THRESH_BINARY)
-        cv2.imwrite(r'C:\Users\MSI\Downloads\binary1.jpg',binaryImage)
+        cv2.imwrite('binary1.jpg',binaryImage)
         ### extract information
         try:
-            subprocess.call('curl -H "apikey:K86104006488957" -o "C:\\Users\\MSI\\Desktop\\processed1.json" --form "detectOrientation=true" --form "file=@C:\\Users\\MSI\\Downloads\\binary1.jpg" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
-            with open(r'C:\Users\MSI\Desktop\processed1.json', encoding='utf-8') as f:
+            subprocess.call('curl -H "apikey:K86104006488957" -o "processed1.json" --form "detectOrientation=true" --form "file=@binary1.jpg" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
+            with open('processed1.json', encoding='utf-8') as f:
                 data=json.load(f)
         except subprocess.TimeoutExpired :
             data = []
@@ -541,15 +604,15 @@ def apply_view(request,pk):
                 line = data['ParsedResults'][0]['TextOverlay']['Lines'][i]['LineText']
                 verso.append(line)
         except (IndexError, KeyError, TypeError) :
-            results=arabicocr.arabic_ocr(r'C:\Users\MSI\Downloads\binary1.jpg',r'C:\Users\MSI\Desktop\arabicocr_output.png')
+            results=arabicocr.arabic_ocr('binary1.jpg','arabicocr_output.png')
             text = correct_ocr_order(results)
             verso = [text[i][0] for i in range(len(text))]
             print(verso)
-        profession = arabic_reshaper.reshape(verso[1])
+        profession = arabic_reshaper.reshape(auto_correction_word(verso[1],'model_job_name','job_name.csv'))
         try:
             adresse = arabic_reshaper.reshape(correct_ocr_output(verso[2])) + '\n' + arabic_reshaper.reshape(correct_ocr_output(verso[3]))
         except IndexError:
-            raise IndexError(str(len(verso))+'\n'+verso[0]+verso[1])
+            adresse = arabic_reshaper.reshape(correct_ocr_output(verso[2]))
         print(profession+'\n'+adresse)
         ############ carte grise recto #############
 ###################################### CROPPING################################
@@ -590,10 +653,10 @@ def apply_view(request,pk):
                     final_pic=gr[Top:Bottom,Left:Right]
         #################################ROTATING#########################
         rot = cv2.rotate(final_pic, cv2.cv2.ROTATE_90_CLOCKWISE)
-        cv2.imwrite(r'C:\Users\MSI\Downloads\rot90.jpg',rot)
+        cv2.imwrite('rot90.jpg',rot)
         ################################### READING########################
         reader = Reader(['ar','en','fa'], gpu = False)
-        bounds = reader.readtext(r'C:\Users\MSI\Downloads\rot90.jpg')	
+        bounds = reader.readtext('rot90.jpg')	
         ###################################
         tab, i, added = [[] for i in range (6)], 0, [1,1,1,1,1,1]
         for h in range(0,6,1):
@@ -676,11 +739,11 @@ def apply_view(request,pk):
                     Right = round(x+w*4.5)
                     Right = width if Right>width else Right
                     final_pic = gr[Top:Bottom, Left:Right]
-                    cv2.imwrite(r'C:\Users\MSI\Downloads\zoomed_carte_grise.jpg', final_pic)
+                    cv2.imwrite('zoomed_carte_grise.jpg', final_pic)
         img_arr = np.array(final_pic)
         try:
-            subprocess.call('curl -H "apikey:K86104006488957" -o "C:\\Users\\MSI\\Desktop\\processed2.json" --form "detectOrientation=true" --form "file=@C:\\Users\\MSI\\Downloads\\zoomed_carte_grise.jpg" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
-            with open(r'C:\Users\MSI\Desktop\processed2.json', encoding='utf-8') as f:
+            subprocess.call('curl -H "apikey:K86104006488957" -o "processed2.json" --form "detectOrientation=true" --form "file=@zoomed_carte_grise.jpg" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
+            with open('processed2.json', encoding='utf-8') as f:
                 data=json.load(f)
         except subprocess.TimeoutExpired :
             data = []
@@ -689,21 +752,19 @@ def apply_view(request,pk):
             l = len(data['ParsedResults'][0]['TextOverlay']['Lines'])
             top = [int(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'][len(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'])-1]['Top']) for i in range(l)]
             left = [int(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'][len(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'])-1]['Left']) for i in range(l)]
-            top, left = sorted(top, reverse=True), sorted(left, reverse=True)
-            #max_top, max_left, min_top, min_left = max(top)+60, max(left), top[len(top)-3]+10, min(left)-20
             max_top, max_left, min_top, min_left = max(top)+30, max(left), int(max(top)/2), min(left)-10
             img_arr = img_arr[min_top : max_top, min_left : max_left]
-        except (IndexError, KeyError, NameError, TypeError):
+        except :
             print("Server did not respond")
             img_arr = img_arr[int(img_arr.shape[0]/2) : img_arr.shape[0], 0 : img_arr.shape[1]]
         # Display the output
-        cv2.imwrite(r'C:\Users\MSI\Downloads\processed1.jpg',img_arr)
+        cv2.imwrite('processed1.jpg',img_arr)
         ### OCRing
-        with open(r'C:\Users\MSI\Downloads\brands.json','r', encoding='utf-8') as f:
+        with open('brands.json','r', encoding='utf-8') as f:
             brands_json=json.load(f)
         f.close()
         brands = [[brands_json['RECORDS'][i]['id'],brands_json['RECORDS'][i]['name']] for i in range(len(brands_json['RECORDS']))]
-        with open(r'C:\Users\MSI\Downloads\automobiles.json','r', encoding='utf-8') as f:
+        with open('automobiles.json','r', encoding='utf-8') as f:
             data=json.load(f)
         f.close()
         date_pattern = '^([0-9][0-9]|19[0-9][0-9]|20[0-9][0-9])(\.|-|/)([1-9]|0[1-9]|1[0-2])(\.|-|/)([1-9]|0[1-9]|1[0-9]|2[0-9]|3[0-1])$'
@@ -737,7 +798,7 @@ def apply_view(request,pk):
                     for j in range(len(presse)):
                         if Levenshtein.ratio(presse[j].lower(),text.lower())>0.8 and Levenshtein.ratio(presse[j].upper(),constructeur)<0.5:
                             modele = correct_ocr_output(presse[j].upper())
-        with open(r'C:\Users\MSI\Downloads\car_brands.json','r', encoding='utf-8') as f:
+        with open('car_brands.json','r', encoding='utf-8') as f:
             logos=json.load(f)
         f.close()
         for i in range(len(logos)):
@@ -745,12 +806,12 @@ def apply_view(request,pk):
                 logo = logos[i]['logo']
                 break
         ######## carte grise verso #########
-        cv2.imwrite(r'C:\Users\MSI\Downloads\carte_grise_verso.jpg',cartegriseverso)
         img_arr=np.array(cartegriseverso)
         angle, img_arr = correct_orientation(img_arr)
+        cv2.imwrite('carte_grise_verso.jpg',img_arr)
         try:
-            subprocess.call('curl -H "apikey:K86104006488957" -o "C:\\Users\\MSI\\Desktop\\processed3.json" --form "detectOrientation=true" --form "file=@C:\\Users\\MSI\\Downloads\\carte_grise_verso.jpg" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=10,shell=True)
-            with open(r'C:\Users\MSI\Desktop\processed3.json', encoding='utf-8') as f:
+            subprocess.call('curl -H "apikey:K86104006488957" -o "processed3.json" --form "detectOrientation=true" --form "file=@carte_grise_verso.jpg" --form "language=ara" --form "isOverlayRequired=true" --form "isCreateSearchablePdf=true" --form "scale=true" "https://api.ocr.space/Parse/Image"',timeout=1,shell=True)
+            with open('processed3.json', encoding='utf-8') as f:
                 data=json.load(f)
         except subprocess.TimeoutExpired :
             data = []
@@ -760,7 +821,7 @@ def apply_view(request,pk):
             left = [int(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'][len(data['ParsedResults'][0]['TextOverlay']['Lines'][i]['Words'])-1]['Left']) for i in range(l)]
             max_top, max_left, min_top, min_left = int(2*max(top)/3), max(left), min(top), min(left)
             img_arr = img_arr[min_top : max_top, min_left : max_left]
-        except (IndexError, KeyError, NameError, TypeError):
+        except :
             print("Server did not respond")
             img_arr = img_arr[0 : int(2*img_arr.shape[0]/3), 0 : ]
         # Display the output
@@ -768,7 +829,7 @@ def apply_view(request,pk):
         img_arr = thresholding(remove_noise(grayscale(img_arr)))
         gauche = img_arr[0 : int(img_arr.shape[0]/4), 0 : int(img_arr.shape[1]/2)]
         droite = img_arr[0 : int(img_arr.shape[0]/2), int(2*img_arr.shape[1]/3) : ]
-        cv2.imwrite(r'C:\Users\MSI\Downloads\droite.jpg',droite)
+        cv2.imwrite('droite.jpg',droite)
         g_config, d_config = r'--oem 3 --psm 6', r'-l eng --oem 3 --psm 6'
         places,puissance_fiscale,energie=0,0,"بنزين"
         g = pytesseract.image_to_data(gauche, config=g_config, output_type=Output.DICT)
@@ -781,7 +842,7 @@ def apply_view(request,pk):
             if re.match(r"[+-]?\d+(?:\.\d+)?",d['text'][i]) and all(x.isdigit() for x in d['text'][i]) and int(d['text'][i])>3 and int(d['text'][i])<50:
                 puissance_fiscale = int(d['text'][i])
                 break
-        results=arabicocr.arabic_ocr(r'C:\Users\MSI\Downloads\droite.jpg',r'C:\Users\MSI\Desktop\arabicocr_output.png')
+        results=arabicocr.arabic_ocr('droite.jpg','arabicocr_output.png')
         for i in range(len(results)):
             if Levenshtein.ratio(results[i][1],"غازوال")>0.6:
                 energie="غازوال"
@@ -796,7 +857,7 @@ def apply_view(request,pk):
             font2 = ImageFont.truetype("arial.ttf", 16, encoding="utf-8")
             font = ImageFont.truetype("arial.ttf", 20, encoding="utf-8")
             text_width, text_height = font.getsize(nom)
-            canvas = Image.open(r'C:\Users\MSI\Downloads\contrat.jpg')
+            canvas = Image.open(os.path.join(settings.BASE_DIR,"contrat.jpg"))
             canvas=canvas.convert('RGB')
             draw = ImageDraw.Draw(canvas)
             draw.text((400, 615), cin, 'black', font)
@@ -814,7 +875,7 @@ def apply_view(request,pk):
             draw.text((400, 928), "Essence" if energie=="بنزين" else "Gasoil", 'black', font2)
             draw.text((400, 945), str(puissance_fiscale), 'black', font2)
             draw.text((400, 962), str(places), 'black', font2)
-            inv = Image.open(r'C:\Users\MSI\Downloads\invoice.png')
+            inv = Image.open(os.path.join(settings.BASE_DIR,"invoice.png"))
             inv=inv.convert('RGB')
             draw = ImageDraw.Draw(inv)
             draw.text((600, 450), "{} DT".format(policy.sum_assurance), 'black', font)
@@ -882,9 +943,8 @@ def question_history_view(request):
 
 
 def download_file(request,pk):
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     filename = "contrat_{}_{}.pdf".format(request.user.id,pk)
-    filepath = BASE_DIR + '\\static\\' + "customer_{}\\".format(request.user.id) + filename
+    filepath = settings.BASE_DIR + '\\static\\' + "customer_{}\\".format(request.user.id) + filename
     fl = open(filepath, 'rb')
     mime_type, _ = mimetypes.guess_type(filename)
     response = HttpResponse(fl, content_type=mime_type)
@@ -892,9 +952,8 @@ def download_file(request,pk):
     return response
 
 def download_invoice(request,pk):
-    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     filename = "INV-{}{}.pdf".format(request.user.id,pk)
-    filepath = BASE_DIR + '\\static\\' + "customer_{}\\".format(request.user.id) + filename
+    filepath = settings.BASE_DIR + '\\static\\' + "customer_{}\\".format(request.user.id) + filename
     fl = open(filepath, 'rb')
     mime_type, _ = mimetypes.guess_type(filename)
     response = HttpResponse(fl, content_type=mime_type)
