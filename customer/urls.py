@@ -7,7 +7,7 @@ urlpatterns = [
     #path('customersignup1', views.customer_signup_view,name='customersignup1'),
     #path('customer-dashboard1', views.customer_dashboard_view,name='customer-dashboard1'),
     path('dashboard', views.customer_dashboard_view,name='customer-dashboard'),
-    #path('customerlogin1', LoginView.as_view(template_name='insurance/adminlogin.html'),name='customerlogin1'),
+    #path('customerlogin1', LoginView.as_view(template_name='backoffice/adminlogin.html'),name='customerlogin1'),
     path('login', LoginView.as_view(template_name='home/sign-in.html'),name='login'),
     path('register', views.customer_signup_view,name='register'),
     path('paypal', include('paypal.standard.ipn.urls')),
@@ -15,8 +15,9 @@ urlpatterns = [
     path('virtual-reality', views.virtual_reality_view,name='virtual-reality'),
     path('rtl', views.rtl_view,name='rtl'),
     path('billing', views.billing_view,name='billing'),
-    path('download/<int:pk>', views.download_file,name='download'),
-    path('download-invoice/<int:pk>', views.download_invoice,name='download-invoice'),
+    path('download-attendance', views.download_attendance,name='download-attendance'),
+    path('download-payslip', views.download_payslip,name='download-payslip'),
+    path('download-autorization/<int:pk>', views.download_autorization,name='download-autorization'),
     path('apply-policy', views.apply_policy_view,name='apply-policy'),
     path('apply/<int:pk>', views.apply_view,name='apply'),
     path('toggle-email', views.toggle_email_view,name='toggle-email'),
@@ -35,4 +36,8 @@ urlpatterns = [
     path('coinbase-checkout/<int:pk>', views.coinbase_checkout_view,name='coinbase-checkout'),
     #path('ask-question', views.ask_question_view,name='ask-question'),
     path('question-history', views.question_history_view,name='question-history'),
+    path('history', views.history_view, name='history'),
+
+    path(route='course', view=views.movie_recommendation_view, name='recommendations'),
+
 ]

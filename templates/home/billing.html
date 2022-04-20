@@ -49,9 +49,9 @@
                     </div>
                     <div class="card-body pt-0 p-3 text-center">
                       <h6 class="text-center mb-0">Salary</h6>
-                      <span class="text-xs">Belong Interactive</span>
+                      <span class="text-xs">Gross</span>
                       <hr class="horizontal dark my-3">
-                      <h5 class="mb-0">+$2000</h5>
+                      <h5 class="mb-0">{{gross}} DT</h5>
                     </div>
                   </div>
                 </div>
@@ -63,10 +63,10 @@
                       </div>
                     </div>
                     <div class="card-body pt-0 p-3 text-center">
-                      <h6 class="text-center mb-0">Paypal</h6>
-                      <span class="text-xs">Freelance Payment</span>
+                      <h6 class="text-center mb-0">Salary</h6>
+                      <span class="text-xs">Net</span>
                       <hr class="horizontal dark my-3">
-                      <h5 class="mb-0">$455.00</h5>
+                      <h5 class="mb-0">{{net}} DT</h5>
                     </div>
                   </div>
                 </div>
@@ -77,10 +77,10 @@
                 <div class="card-header pb-0 p-3">
                   <div class="row">
                     <div class="col-md-6 d-flex align-items-center">
-                      <h6 class="mb-0">Payment Method</h6>
+                      <h6 class="mb-0">Payout Method</h6>
                     </div>
                     <div class="col-md-6 text-right">
-                      <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class="fas fa-plus"></i>&nbsp;&nbsp;Add New Card</a>
+                      <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class="fas fa-plus"></i>&nbsp;&nbsp;Add Bank Account</a>
                     </div>
                   </div>
                 </div>
@@ -115,7 +115,7 @@
             <div class="card-header pb-0 p-3">
               <div class="row">
                 <div class="col-md-6 d-flex align-items-center">
-                  <h6 class="mb-0">Invoices</h6>
+                  <h6 class="mb-0">Approved leave requests</h6>
                 </div>
                 <div class="col-md-6 text-right">
                   <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
@@ -125,19 +125,21 @@
             <div class="card-body p-3">
               <ul class="list-group">
                 {% for t in policies %}
-                <form action="{% url 'download-invoice' t.id  %}">
+                {% if 'Approved' in t.status %}
+                <form action="{% url 'download-autorization' t.id  %}">
                 <li class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
                   <div class="d-flex flex-column">
                     <h6 class="mb-1 text-dark font-weight-bold text-sm">{{t.creation_date}}</h6>
-                    <span class="text-xs">#INV-{{request.user.id}}{{t.id}}</span>
+                    <span class="text-xs">#Autorization-{{request.user.id}}{{t.id}}</span>
                   </div>
                   <div class="d-flex align-items-center text-sm">
-                    {{t.Policy.sum_assurance}} DT
+                    {{t.Policy.policy_name}}
                     <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i class="fas fa-file-pdf text-lg me-1"></i> PDF</button>
                     
                     </div>
                 </li>
                 </form>
+                {% endif %}
                 {% endfor %}
                 
               </ul>
@@ -149,7 +151,7 @@
         <div class="col-md-7">
           <div class="card my-4">
             <div class="card-header pb-0 px-3">
-              <h6 class="mb-0">Billing Information</h6>
+              <h6 class="mb-0">Payout information</h6>
             </div>
             <div class="card-body pt-4 p-3">
               <ul class="list-group">

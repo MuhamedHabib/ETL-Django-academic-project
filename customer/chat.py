@@ -10,11 +10,11 @@ from nltk.stem import  WordNetLemmatizer
 from tensorflow.python.keras.models import load_model
 
 lemmatizer=WordNetLemmatizer()
-intents=json.loads(open(r'C:\Users\MSI\Downloads\intents.json').read())
+#intents=json.loads(open(r'C:\Users\MSI\Downloads\intents.json').read())
 
-words=pickle.load(open(r'C:\Users\MSI\Downloads\words.pkl','rb'))
-classes=pickle.load(open(r'C:\Users\MSI\Downloads\classes.pkl','rb'))
-model=load_model(r'C:\Users\MSI\Downloads\chatboot_model.h5')
+#words=pickle.load(open(r'C:\Users\MSI\Downloads\words.pkl','rb'))
+#classes=pickle.load(open(r'C:\Users\MSI\Downloads\classes.pkl','rb'))
+#model=load_model(r'C:\Users\MSI\Downloads\chatboot_model.h5')
 
 def clean_up_sentence(sentence):
     sentence_words=nltk.word_tokenize(sentence)
